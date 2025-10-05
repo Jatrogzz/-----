@@ -72,10 +72,7 @@ for (var key of params.keys()){
   data[key] = params.get(key);
 }
 
-const imageParam = params.get('image');
-if (imageParam) {
-  document.querySelector('.id_own_image').style.backgroundImage = `url(${imageParam})`;
-}
+document.querySelector(".id_own_image").style.backgroundImage = `url(${data['image']})`;
 
 var birthday = data['birthday'];
 var birthdaySplit = birthday.split(".");
